@@ -1,0 +1,42 @@
+.author 
+  .post-author-container
+    background-color: $white
+    margin-bottom: 81px
+  .post-author-block
+    padding: 0
+
+.post-author-block__name
+  margin-top: 20px
+  margin-bottom: 28px
+  a
+    font-family: inherit
+    color: inherit
+.author-page__title
+  font-family: 'Yeseva One', cursive
+  font-weight: 400
+.post-author-block__decription
+  text-align: justify
+
+.category .post-author-block
+  max-width: 948px
+  margin: 0 auto
+
+.post-author-block__image
+  margin-right: 40px
+
+.post-author-block__name
+  margin-top: 16px
+  margin-bottom: 24px
+
+@media screen and (max-width: 768px)
+  .post-author-block__decription
+    padding: 0 16px
+  .post-author-block
+    flex-direction: column
+    align-items: center
+    text-align: center
+  .post-author-block__image
+    margin-right: 0
+@media screen and (max-width: 414px)
+  .post-author-block__image
+    width: 100%

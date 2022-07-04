@@ -1,0 +1,63 @@
+.footer
+  background-color: $dark
+  font-family: "Comfortaa", serif
+
+.footer *
+  font-size: 14px
+  font-family: inherit
+  color: $white
+
+.footer .container
+  padding-top: 5px
+  padding-bottom: 5px
+  display: flex
+  align-items: center
+
+.footer-logo
+  height: 50px
+  margin-right: 29px
+  order: 1
+
+.copyright
+  order: 2
+
+.footer-menu
+  margin-left: auto
+  order: 3
+  ul
+    display: flex
+    align-items: center
+    justify-content: flex-end
+  .menu-item
+    margin-left: 35px
+    height: auto
+    min-width: auto
+    a
+      font-family: "Comfortaa", serif
+      font-size: 14px
+      font-weight: 400
+
+@media screen and (max-width: 1366px)
+  .footer 
+    .container
+      padding-right: 2%
+      padding-left: 2%
+@media screen and (max-width: 980px)
+  .footer 
+    .container, ul
+      flex-direction: column
+  .footer .container
+    padding-top: 40px
+    padding-bottom: 40px
+  .footer-logo
+    margin-right: 0
+  .footer-menu
+    order: 2
+    margin-left: initial
+    .menu-item
+      margin-left: 0
+      margin-top: 32px
+  .copyright
+    order: 3
+    margin-top: 40px
+    

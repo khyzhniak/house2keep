@@ -1,0 +1,29 @@
+@import "header-menu"
+
+.header
+  margin-top: 29px
+.header__top
+  display: flex
+  justify-content: space-between
+  align-items: center
+  //padding: 0 2%
+.header__bottom
+  margin-top: 51px
+
+.header__logo
+  width: 170px
+  margin-right: 32px
+
+  img
+    display: block
+    width: 100%
+    height: auto
+
+@media screen and (max-width: 768px)
+  .header__top
+    flex-direction: column
+  .header__bottom
+    margin-top: 0
+  .header__logo
+    width: 120px
+    margin: 0

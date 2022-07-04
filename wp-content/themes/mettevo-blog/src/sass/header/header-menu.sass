@@ -1,0 +1,75 @@
+.main-menu
+  ul
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: flex-start
+    margin: 0
+    padding: 0
+
+.header
+  .main-menu
+    ul
+      padding: 0
+      overflow: auto // change overflow: auto -- for mobile version
+      column-gap: 10px
+      scrollbar-width: thin
+  .menu-item
+    margin-bottom: 8px
+  .menu-item:hover
+    a
+      color: $dark
+
+.header .main-menu ul::-webkit-scrollbar 
+  width: 8px
+  height: 6px
+.header .main-menu ul::-webkit-scrollbar-track 
+  background-color: #fff
+  border-radius: 100px
+.header .main-menu ul::-webkit-scrollbar-thumb 
+  border-radius: 100px
+  border: 2px solid transparent
+  background-clip: content-box
+  background-color: #e7e7e7
+
+.menu-item
+  flex-shrink: 0
+  min-width: 115px
+  list-style: none
+  text-align: center
+
+  a
+    font-size: 22px
+    color: $white
+    text-decoration: none
+    white-space: nowrap
+    font-weight: 900
+    transition: color 0.3s ease-in-out
+
+  &__normal
+    padding: 8px 20px
+    background-color: $secondary
+    border-radius: 20px
+
+  &.current-menu-item
+    background-color: $dark
+    &:hover
+      a
+        color: $white
+
+
+
+
+@media screen and (max-width: 768px)
+  .header
+    .main-menu
+      ul
+        flex-wrap: nowrap
+        justify-content: space-between
+        overflow: auto
+    .menu-item
+      padding-top: 5px
+      padding-bottom: 5px
+      line-height: 1.275
+      a
+        font-size: 18px

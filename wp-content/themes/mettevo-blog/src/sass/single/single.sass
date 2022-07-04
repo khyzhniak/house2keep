@@ -1,0 +1,123 @@
+.single-post .main-content
+  grid-template-columns: 380px 1fr
+  margin-top: 50px
+
+
+.post-author-container
+  background-color: $secondary-bg 
+.post-author-block
+  padding: 40px
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+
+.single-post
+  .post-author-block
+    margin-top: 32px
+  .post-author-block__image
+    width: 170px
+
+.single-post .main-content
+  padding-bottom: 120px
+
+.single-post__image
+  margin: 32px auto 
+
+  .lazyloaded
+    width: 100%
+    display: block
+    height: auto
+
+.single-post__tags,
+.single-post__tags *
+  font-family: 'Ubuntu', sans-serif
+  color: $grey
+  font-size: 18px
+
+.single-post__wrapper
+  .wp-block-image:not(:first-of-type)
+    margin-top: 32px
+
+.related-posts__slider
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  align-items: stretch
+  margin-top: 20px
+  margin-right: -9px
+  margin-left: -9px
+  padding-bottom: 80px
+
+  .slide
+    width: calc( (100% - 2 * 4 * 9px) / 4)   
+    margin-right: 9px
+    margin-left: 9px
+  
+  .slide__thumbnail
+    width: 100%
+
+  .slide__content 
+    padding-top: 16px
+    padding-right: 16px
+    padding-left: 16px
+  
+  .slide__title
+    display: block
+    font-family: "Frank Ruhl Libre",serif
+    font-size: 22px
+    font-weight: bold
+    color: $dark
+  span:not(.slide__title)
+    display: none //display: inline-block
+    color: $grey
+  .slide__date,
+  .slide__author
+    margin-top: 8px
+  .slide__date
+    margin-right: 8px
+  .slide__author
+    color: $dark
+
+.slider-navigation
+  visibility: hidden
+  display: flex
+  justify-content: space-between
+  width: 100%
+  padding: 16px
+  .slide__prev,
+  .slide__next
+    width: 45px
+    height: 24px
+    cursor: pointer
+  .slide__prev
+    transform: rotateY(180deg)
+
+
+@media screen and (max-width: 1366px)
+  .article-block__content
+    padding-right: 16px
+  .single-post__title
+    text-align: center
+    padding: 0 16px
+@media screen and (max-width: 1024px)
+  .article-block__title
+    text-align: center
+  .article-block__content
+    padding-left: 16px
+  .single-post .main-content
+    grid-template-columns: 1fr
+  .related-posts__slider .slide
+    width: calc( (100% - 2 * 3 * 9px) / 3)  
+    
+@media screen and (max-width: 768px)
+  .slider-navigation
+    visibility: visible
+  .related-posts h2
+    text-align: center
+  .related-posts__slider 
+    .slide
+      width: calc( (100% - 2 * 2 * 9px) / 2) 
+      span
+        display: inline-block
+  .slide__title
+    font-size: 18px

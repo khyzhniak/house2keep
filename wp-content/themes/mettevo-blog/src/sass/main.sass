@@ -1,0 +1,100 @@
+﻿@import "normalize"
+@import "settings/button"
+@import "settings/colors"
+@import "settings/vars"
+@import "header/header"
+@import "footer/footer"
+@import "search-bar/search-bar"
+@import "content/content"
+@import "single/single"
+@import "category/category-page"
+@import "author/author"
+@import "settings/plugins"
+@import "custom-page"
+
+
+html, body
+  height: 100%
+
+body
+  font-size: 100%
+  display: flex
+  flex-direction: column
+
+.main
+  flex: 1
+  padding-top: 50px
+
+.home .main
+  padding-bottom: 132px
+
+.container
+  position: relative
+  width: 90%
+  max-width: 1370px
+  margin: 0 auto
+  overflow: hidden
+
+.main-content
+  display: grid
+  grid-template-columns: 1fr 380px
+  grid-column-gap: 41px
+
+.category .main-content
+  padding-top: 120px
+
+.totop 
+  position: fixed
+  bottom: 115px
+  right: 3.125rem
+  opacity: 0
+  visibility: hidden
+  background-color: $secondary-bg
+  background-image: url("../images/totop.png")
+  background-position: center
+  background-repeat: no-repeat
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  color: blue
+  border-radius: 50%
+  width: 40px
+  height: 40px
+  z-index: 1
+  transition: all 0.3s ease-in-out
+
+.totop.visible 
+  opacity: 1
+  visibility: visible
+
+.schema-faq-section 
+  margin-bottom: 24px
+
+.schema-faq-question
+  display: inline-block
+  font-family: "Ubuntu",sans-serif
+  font-size: 18px
+  line-height: 25px
+  margin-bottom: 8px
+  color: $grey
+  font-weight: bold
+
+
+@media screen and (max-width: 1200px) 
+  .home .main
+    padding-bottom: 0
+  .main-content
+    grid-template-columns: 1fr
+
+
+@media screen and (max-width: 768px)
+  .container
+    width: 100%
+  .totop
+    display: none
+
+
+
+
+
+

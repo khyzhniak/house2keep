@@ -1,0 +1,116 @@
+// Ajax search Lite
+  
+.search-bar 
+  div.asl_w
+    background-color: $primary-bg!important
+  #ajaxsearchlite1 .probox, 
+  div.asl_w .probox
+    background-image: none
+    background-color: $primary-bg!important
+    padding-top: 8px!important
+    padding-bottom: 7px!important
+  #ajaxsearchlite1 .probox .proinput input, 
+  div.asl_w .probox .proinput input
+    color: $dark!important
+    font-size: 16px!important
+    font-weight: 100!important
+    padding-left: 10px!important
+    &::-webkit-input-placeholder 
+      color: $grey!important
+    &:-ms-input-placeholder 
+      color: $grey!important
+    &::placeholder 
+      color: $grey!important
+
+  .asl_w_container
+    border-radius: 30px
+    overflow: hidden
+
+
+  div.asl_w .probox .promagnifier
+    position: relative
+    margin-right: 0!important
+    margin-top: -8px!important
+    padding: 7px 32px 9px 32px!important
+    background: $primary!important
+    color: #363636!important
+    border-radius: 48px!important
+    border: none!important
+    font-weight: 700!important
+    font-size: 30px!important
+    line-height: 39px!important
+    transition: color .3s ease-in-out!important
+    cursor: pointer!important
+    &::after
+      position: absolute
+      content: 'Go'
+      top: 50%
+      right: 50%
+      transform: translate(50%, -50%)
+      font-family: 'Frank Ruhl Libre', serif
+      transition: color 0.3s ease-in-out
+    &:hover
+      &::after
+        color: $white
+    .innericon
+      visibility: hidden!important
+
+
+div.asl_r.vertical
+  padding: 2px!important
+  background: rgba(0,0,0,.12)!important
+  border-radius: 3px!important
+
+@media screen and (max-width: 768px)
+  .search-bar 
+    #ajaxsearchlite1 .probox, 
+    div.asl_w .probox 
+      padding-top: 3px !important
+      padding-bottom: 3px !important
+    div.asl_w .probox .promagnifier 
+      margin-top: -4px !important
+      padding: 4px 17px 3px 17px !important
+      font-size: 24px!important
+      line-height: 16px !important
+
+// LuckyWP Table of Contents
+
+.single
+  .lwptoc:first-child,
+  .lwptoc
+    margin: 0
+  .lwptoc_i
+    padding: 0
+  .lwptoc_header
+    margin-bottom: 32px
+    font-family: 'Frank Ruhl Libre', serif
+    font-size: 32px
+  .lwptoc_item 
+    margin-top: 12px
+    a
+      font-size: 18px
+      color: $dark
+      .lwptoc_item_label
+        position: relative
+        &::after
+          position: absolute
+          content: ''
+          bottom: -4px
+          left: 0
+          width: 100%
+          height: 2px
+          background-color: $primary
+          transition: height 0.3s ease-in-out
+    &:hover
+      .lwptoc_item_label
+        &::after
+          height: 3px
+        
+@media screen and (max-width: 768px)
+  .single
+    .lwptoc_header
+      font-size: 24px
+    .lwptoc_item 
+      a
+        font-size: 16px
+
